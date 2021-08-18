@@ -18,7 +18,7 @@
     
     
       
-        <title>Azure disk loss - Litmus Experiments</title>
+        <title>Azure Disk Loss - Litmus Experiments</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Azure disk loss
+              Azure Disk Loss
             
           </span>
         </div>
@@ -210,13 +210,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../contents/" class="md-tabs__link">
+      <a href="../../contents/" class="md-tabs__link md-tabs__link--active">
         Experiments
       </a>
     </li>
@@ -386,12 +388,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Experiments
@@ -881,12 +885,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       <label class="md-nav__link" for="__nav_2_3">
         Cloud Infrastructure
@@ -1121,12 +1127,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" checked>
       
       <label class="md-nav__link" for="__nav_2_3_3">
         Azure
@@ -1147,6 +1155,130 @@
       <a href="../azure-instance-stop/" class="md-nav__link">
         Azure Instance Stop
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Azure Disk Loss
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Azure Disk Loss
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uses" class="md-nav__link">
+    Uses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-validations" class="md-nav__link">
+    Default Validations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimal-rbac-configuration-example-optional" class="md-nav__link">
+    Minimal RBAC configuration example (optional)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-tunables" class="md-nav__link">
+    Experiment tunables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-examples" class="md-nav__link">
+    Experiment Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Experiment Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-experiment-tunables" class="md-nav__link">
+    Common Experiment Tunables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detach-virtual-disks-by-name" class="md-nav__link">
+    Detach Virtual Disks By Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detach-virtual-disks-attached-to-scale-set-instances-by-name" class="md-nav__link">
+    Detach Virtual Disks Attached to Scale Set Instances By Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-iterations-of-chaos" class="md-nav__link">
+    Multiple Iterations Of Chaos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1989,8 +2121,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#detach-virtual-disks-by-name-attached-to-scale-set-instances" class="md-nav__link">
-    Detach Virtual Disks By Name Attached to Scale Set Instances
+  <a href="#detach-virtual-disks-attached-to-scale-set-instances-by-name" class="md-nav__link">
+    Detach Virtual Disks Attached to Scale Set Instances By Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-iterations-of-chaos" class="md-nav__link">
+    Multiple Iterations Of Chaos
   </a>
   
 </li>
@@ -2017,7 +2156,7 @@
                   </a>
                 
                 
-                  <h1>Azure disk loss</h1>
+                  <h1>Azure Disk Loss</h1>
                 
                 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2176,7 +2315,7 @@ ENV value on <code>experiment.yaml</code>with the same name.</p>
 <h3 id="detach-virtual-disks-by-name">Detach Virtual Disks By Name<a class="headerlink" href="#detach-virtual-disks-by-name" title="Permanent link">&para;</a></h3>
 <p>It contains comma separated list of disk names subjected to disk loss chaos. It can be tuned via <code>VIRTUAL_DISK_NAMES</code> ENV.</p>
 <p>Use the following example to tune this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># multiple disks </span>
+<div class="highlight"><pre><span></span><code><span class="c1"># detach multiple azure disks by their names </span>
 <span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">litmuschaos.io/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ChaosEngine</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2190,20 +2329,19 @@ ENV value on <code>experiment.yaml</code>with the same name.</p>
     <span class="nt">spec</span><span class="p">:</span>
       <span class="nt">components</span><span class="p">:</span>
         <span class="nt">env</span><span class="p">:</span>
-         <span class="c1"># time duration for the chaos execution</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TOTAL_CHAOS_DURATION</span>
-          <span class="nt">VALUE</span><span class="p">:</span> <span class="s">&#39;60&#39;</span>
+        <span class="c1"># comma separated names of the azure disks attached to VMs</span>
         <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VIRTUAL_DISK_NAMES</span>
           <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;disk-01,disk-02&#39;</span>
+        <span class="c1"># name of the resource group</span>
         <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">RESOURCE_GROUP</span>
           <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;&lt;resource</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">VIRTUAL_DISK_NAMES&gt;&#39;</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SCALE_SET</span>
-          <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;disable&#39;</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TOTAL_CHAOS_DURATION</span>
+          <span class="nt">VALUE</span><span class="p">:</span> <span class="s">&#39;60&#39;</span>
 </code></pre></div>
-<h3 id="detach-virtual-disks-by-name-attached-to-scale-set-instances">Detach Virtual Disks By Name Attached to Scale Set Instances<a class="headerlink" href="#detach-virtual-disks-by-name-attached-to-scale-set-instances" title="Permanent link">&para;</a></h3>
+<h3 id="detach-virtual-disks-attached-to-scale-set-instances-by-name">Detach Virtual Disks Attached to Scale Set Instances By Name<a class="headerlink" href="#detach-virtual-disks-attached-to-scale-set-instances-by-name" title="Permanent link">&para;</a></h3>
 <p>It contains comma separated list of disk names attached to scale set instances subjected to disk loss chaos. It can be tuned via <code>VIRTUAL_DISK_NAMES</code> and <code>SCALE_SET</code> ENV.</p>
 <p>Use the following example to tune this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># multiple disks </span>
+<div class="highlight"><pre><span></span><code><span class="c1"># detach multiple azure disks attached to scale set VMs by their names</span>
 <span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">litmuschaos.io/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ChaosEngine</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2217,6 +2355,38 @@ ENV value on <code>experiment.yaml</code>with the same name.</p>
     <span class="nt">spec</span><span class="p">:</span>
       <span class="nt">components</span><span class="p">:</span>
         <span class="nt">env</span><span class="p">:</span>
+        <span class="c1"># comma separated names of the azure disks attached to scale set VMs</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VIRTUAL_DISK_NAMES</span>
+          <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;disk-01,disk-02&#39;</span>
+        <span class="c1"># name of the resource group</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">RESOURCE_GROUP</span>
+          <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;&lt;resource</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">VIRTUAL_DISK_NAMES&gt;&#39;</span>
+        <span class="c1"># VM belongs to scale set or not</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SCALE_SET</span>
+          <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;enable&#39;</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TOTAL_CHAOS_DURATION</span>
+          <span class="nt">VALUE</span><span class="p">:</span> <span class="s">&#39;60&#39;</span>
+</code></pre></div>
+<h3 id="multiple-iterations-of-chaos">Multiple Iterations Of Chaos<a class="headerlink" href="#multiple-iterations-of-chaos" title="Permanent link">&para;</a></h3>
+<p>The multiple iterations of chaos can be tuned via setting <code>CHAOS_INTERVAL</code> ENV. Which defines the delay between each iteration of chaos.</p>
+<p>Use the following example to tune this:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># defines delay between each successive iteration of the chaos</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">litmuschaos.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ChaosEngine</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">engine-nginx</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">engineState</span><span class="p">:</span> <span class="s">&quot;active&quot;</span>
+  <span class="nt">annotationCheck</span><span class="p">:</span> <span class="s">&quot;false&quot;</span>
+  <span class="nt">chaosServiceAccount</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">azure-disk-loss-sa</span>
+  <span class="nt">experiments</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">azure-disk-loss</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">components</span><span class="p">:</span>
+        <span class="nt">env</span><span class="p">:</span>
+        <span class="c1"># delay between each iteration of chaos</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">CHAOS_INTERVAL</span>
+          <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;10&#39;</span>
          <span class="c1"># time duration for the chaos execution</span>
         <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TOTAL_CHAOS_DURATION</span>
           <span class="nt">VALUE</span><span class="p">:</span> <span class="s">&#39;60&#39;</span>
@@ -2224,8 +2394,6 @@ ENV value on <code>experiment.yaml</code>with the same name.</p>
           <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;disk-01,disk-02&#39;</span>
         <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">RESOURCE_GROUP</span>
           <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;&lt;resource</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">VIRTUAL_DISK_NAMES&gt;&#39;</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SCALE_SET</span>
-          <span class="nt">value</span><span class="p">:</span> <span class="s">&#39;enable&#39;</span>
 </code></pre></div>
                 
               
@@ -2247,6 +2415,54 @@ ENV value on <code>experiment.yaml</code>with the same name.</p>
 
 
     <!-- Link to previous and/or next page -->
+    
+    <nav
+        class="md-footer__inner md-grid"
+        aria-label="Footer"
+    >
+
+        <!-- Link to previous page -->
+        
+        <a
+            href="../azure-instance-stop/"
+            class="md-footer__link md-footer__link--prev"
+            rel="prev"
+        >
+            <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer__title">
+            <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                Previous
+                </span>
+                Azure Instance Stop
+            </div>
+            </div>
+        </a>
+        
+
+        <!-- Link to next page -->
+        
+        <a
+            href="../../gcp/gcp-vm-instance-stop/"
+            class="md-footer__link md-footer__link--next"
+            rel="next"
+        >
+            <div class="md-footer__title">
+            <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                Next
+                </span>
+                GCP Instance Stop
+            </div>
+            </div>
+            <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+        </a>
+        
+    </nav>
     
 
   <!-- Further information -->
